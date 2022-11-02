@@ -11,7 +11,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ColoredCellIteratorTest {
 
-
+    // TODO
+    //  uncomment
     /*
      * +---+---+---+
      * | R | B | R |
@@ -22,7 +23,7 @@ class ColoredCellIteratorTest {
      * +---+---+---+
      */
 
-    private static ArrayGrid gridThreeThree = new ArrayGrid(3,3);
+  /*  private static ArrayGrid gridThreeThree = new ArrayGrid(3,3);
 
     @BeforeAll
     private static void initializeColorsGrid(){
@@ -55,5 +56,5 @@ class ColoredCellIteratorTest {
         assertThat(fromIteratorCells).hasSameElementsAs(expectedBlackCells).hasSameSizeAs(expectedBlackCells);
 
     }
-
+   */
 }
