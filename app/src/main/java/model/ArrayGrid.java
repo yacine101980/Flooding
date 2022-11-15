@@ -5,9 +5,9 @@ import java.util.ArrayList;
 
 public class ArrayGrid implements Grid{
 
-    public Cell[][] cells;
-    private int numberOfRows;
-    private int numberOfColumns;
+    public final Cell[][] cells;
+    private final int numberOfRows;
+    private final int numberOfColumns;
 
     public ArrayGrid(int numberOfRows, int numberOfColumns) {
         if ((numberOfRows <= 0) || (numberOfColumns <= 0)) {throw new IllegalArgumentException();}
@@ -46,4 +46,12 @@ public class ArrayGrid implements Grid{
 
     @Override
     public int getNumberOfRows() {return this.numberOfRows;}
+
+    public void color(ColorGenerator colorGenerator) {
+        for (int i = 0; i < numberOfRows; i++) {
+            for (int j = 0; j < numberOfColumns; j++) {
+                cells[i][j].setColor(colorGenerator.nextColor(cells[i][j]));
+            }
+        }
+    }
 }

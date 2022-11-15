@@ -40,4 +40,9 @@ public class GrayGrid implements Grid{
     public int getNumberOfColumns() {
         return numnberOfColumns;
     }
+
+    @Override
+    public void color(ColorGenerator colorGenerator) {
+
+    }
 }

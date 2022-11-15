@@ -54,7 +54,7 @@ class ArrayGridTest {
     void testGetNumberOfColumns() {
         assertThat(new ArrayGrid(100,200).getNumberOfColumns()).isEqualTo(200);
     }
-/*
+
     private void setArrayGridThreeFourRed(){
         for (int rowIndex = 0; rowIndex < 3; rowIndex++) {
             for (int columnIndex = 0; columnIndex < 4; columnIndex++) {
@@ -73,7 +73,7 @@ class ArrayGridTest {
             }
         }
     }
-
+/*
     @Test
     void testIterator() {
         Iterator<Cell> iterator = arrayGridTwoTwo.iterator();

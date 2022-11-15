@@ -27,5 +27,6 @@ public interface  Grid  {
      * @param colorGenerator the generator used to determine the color of each cell.
      *                       The new color of {@code cell} is obtained by calling the method {@code nextColor}
      */
+    void color(ColorGenerator colorGenerator);
 
 }
