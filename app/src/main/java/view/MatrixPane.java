@@ -8,6 +8,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
+import model.ArrayGrid;
 import model.Cell;
 import model.GrayGrid;
 import model.Grid;
@@ -29,7 +30,7 @@ public class MatrixPane extends GridPane {
         this.numberOfColumns = numberOfColumns;
         this.numberOfRows = numberOfRows;
         // TODO replace by new ArrayGrid(numberOfRows, numberOfColumns)
-        cellGrid = new GrayGrid(numberOfRows, numberOfColumns);
+        cellGrid = new ArrayGrid(numberOfRows, numberOfColumns);
         initMatrix();
     }
 

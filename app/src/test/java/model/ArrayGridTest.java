@@ -11,9 +11,6 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ArrayGridTest {
 
-    // TODO
-    //  uncomment
-/*
     private  ArrayGrid arrayGridThreeFour;
     private final ArrayGrid arrayGridTwoTwo = new ArrayGrid(2,2);
 
@@ -57,7 +54,7 @@ class ArrayGridTest {
     void testGetNumberOfColumns() {
         assertThat(new ArrayGrid(100,200).getNumberOfColumns()).isEqualTo(200);
     }
-
+/*
     private void setArrayGridThreeFourRed(){
         for (int rowIndex = 0; rowIndex < 3; rowIndex++) {
             for (int columnIndex = 0; columnIndex < 4; columnIndex++) {
@@ -65,6 +62,7 @@ class ArrayGridTest {
             }
         }
     }
+
     @Test
     void testColor() {
         setArrayGridThreeFourRed();
@@ -89,5 +87,5 @@ class ArrayGridTest {
         assertThat(iterator.hasNext()).isFalse();
 
     }
- */
+     */
 }
