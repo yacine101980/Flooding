@@ -2,6 +2,7 @@ package model;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ArrayGrid implements Grid{
 
@@ -48,10 +49,16 @@ public class ArrayGrid implements Grid{
     public int getNumberOfRows() {return this.numberOfRows;}
 
     public void color(ColorGenerator colorGenerator) {
-        for (int i = 0; i < numberOfRows; i++) {
-            for (int j = 0; j < numberOfColumns; j++) {
-                cells[i][j].setColor(colorGenerator.nextColor(cells[i][j]));
-            }
+        for (Cell cell : this) {
+            cell.setColor(colorGenerator.nextColor(cell));
         }
+        /*for (int i = 0; i < numberOfRows; i++) {
+            for (int j = 0; j < numberOfColumns; j++) {
+
+            }
+        }*/
     }
+
+    public Iterator<Cell> iterator() {return new CellGridIterator(ArrayGrid.this);}
+
 }

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Iterator;
+
 public class GrayGrid implements Grid{
 
     private final int numberOfRows;
@@ -42,7 +44,10 @@ public class GrayGrid implements Grid{
     }
 
     @Override
-    public void color(ColorGenerator colorGenerator) {
+    public void color(ColorGenerator colorGenerator) {}
 
+    @Override
+    public Iterator<Cell> iterator() {
+        return null;
     }
 }

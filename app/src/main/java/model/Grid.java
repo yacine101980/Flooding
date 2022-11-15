@@ -1,6 +1,6 @@
 package model;
 
-public interface  Grid  {
+public interface  Grid  extends Iterable<Cell> {
 
     /**
      * Return the cell located at the given coordinates in the grid.
