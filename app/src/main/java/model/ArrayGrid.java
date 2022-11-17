@@ -29,13 +29,10 @@ public class ArrayGrid implements Grid{
 
     private void calculateNeighbours(int indexRow, int indexColumn) {
         List<Cell> neighbours = new ArrayList<>();
-
         if(indexRow > 0){ neighbours.add(getCell(indexRow - 1, indexColumn)); }
         if(indexColumn > 0){ neighbours.add(getCell(indexRow, indexColumn - 1)); }
         if(indexRow + 1 < getNumberOfRows()){ neighbours.add(getCell(indexRow + 1, indexColumn)); }
         if(indexColumn + 1 < getNumberOfColumns()){ neighbours.add(getCell(indexRow, indexColumn + 1)); }
-
-
         getCell(indexRow,indexColumn).setNeighbours(neighbours);
     }
 

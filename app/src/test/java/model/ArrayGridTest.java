@@ -73,7 +73,7 @@ class ArrayGridTest {
             }
         }
     }
-/*
+
     @Test
     void testIterator() {
         Iterator<Cell> iterator = arrayGridTwoTwo.iterator();
@@ -87,5 +87,5 @@ class ArrayGridTest {
         assertThat(iterator.hasNext()).isFalse();
 
     }
-     */
+
 }
