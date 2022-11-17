@@ -15,7 +15,7 @@ public class CyclicColorGenerator implements ColorGenerator {
     @Override
     public Color nextColor(Cell cell) {
         i++;
-        if (i == colors.size()) {i = 0;}
-        return colors.get(i);
+        if ((i-1) == colors.size()) {i = 1;}
+        return colors.get(i-1);
     }
 }

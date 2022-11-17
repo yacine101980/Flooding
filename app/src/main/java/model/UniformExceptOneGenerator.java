@@ -2,12 +2,12 @@ package model;
 
 import javafx.scene.paint.Color;
 
-public class UniformExpectOneGenerator  implements ColorGenerator {
+public class UniformExceptOneGenerator  implements ColorGenerator {
     private final Color uniformColor;
     private final Color exceptionColor;
     private int i = 0;
 
-    public UniformExpectOneGenerator(Color uniformColor, Color exceptionColor) {
+    public UniformExceptOneGenerator(Color uniformColor, Color exceptionColor) {
         this.uniformColor = uniformColor;
         this.exceptionColor = exceptionColor;
     }
@@ -15,7 +15,7 @@ public class UniformExpectOneGenerator  implements ColorGenerator {
     @Override
     public Color nextColor(Cell cell) {
         i++;
-        if (i != 1) {return uniformColor;}
+        if ((i-1) != 1) {return uniformColor;}
         return exceptionColor;
     }
 }

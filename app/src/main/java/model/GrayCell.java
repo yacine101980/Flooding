@@ -3,6 +3,7 @@ package model;
 import javafx.beans.property.Property;
 import javafx.scene.paint.Color;
 
+import java.util.Iterator;
 import java.util.List;
 
 public class GrayCell extends AbstractCell{
@@ -28,6 +29,11 @@ public class GrayCell extends AbstractCell{
     @Override
     public void setNeighbours(List<Cell> cells) {
 
+    }
+
+    @Override
+    public Iterator<Cell> iterator() {
+        return null;
     }
 
     @Override
