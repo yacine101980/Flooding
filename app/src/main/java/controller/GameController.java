@@ -152,7 +152,7 @@ public class GameController {
 
     @FXML
     public void setPlayerRandomWalk() {
-        Player player = new ComputerPlayer("walker", matrixPane.getGrid().getCell(0, 0), new RandomWalk());
+        Player player = new ComputerPlayer("walker", matrixPane.getGrid().getCell(0, 0), new RandomWalk(availableColors));
         game.setPlayer(player);
     }
 
