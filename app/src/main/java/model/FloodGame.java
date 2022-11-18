@@ -5,6 +5,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import java.util.Arrays;
 import java.util.List;
 
+import static model.Flooder.coloredArea;
+
 public class FloodGame {
 
     private  Player player;
@@ -48,19 +50,15 @@ public class FloodGame {
     }
 
 
-    public int getPlayerScore(Player player) {
-        // TODO
-        return 0;
-    }
+    public int getPlayerScore(Player player) {return coloredArea(player.getStartCell());}
 
     public boolean hasWon(Player player){
-        // TODO
+        if (coloredArea(player.getStartCell()) == totalFloodingArea) {
+            return true;
+        }
         return false;
     }
 
-    public boolean hasEnded(){
-        // TODO
-        return false;
-    }
+    public boolean hasEnded(){return hasWon(this.player);}
 
 }

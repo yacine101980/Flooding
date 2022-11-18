@@ -86,24 +86,20 @@ public class GameController {
     }
 
     private void playComputerTurn(){
-        // TODO
-        //  uncomment
-        // if (!game.hasEnded() && !game.isHumanTurn()){
-        //    ComputerPlayer player = ((ComputerPlayer) game.getPlayer());
-        //    Flooder.flood(player.getStartCell(), player.play());
-        //    setScoreLabelTextProperty();
-        //    pause.play();
-        // }
+        /*if (!game.hasEnded() && !game.isHumanTurn()){
+            ComputerPlayer player = ((ComputerPlayer) game.getPlayer());
+            Flooder.flood(player.getStartCell(), player.play());
+            setScoreLabelTextProperty();
+            pause.play();
+        }*/
     }
 
     public void playHumanTurn(Color color){
-        // TODO
-        //  uncomment
-        // if(!game.hasEnded() && game.isHumanTurn()){
-        //     Flooder.flood(game.getPlayer().getStartCell(), color);
-        //    setScoreLabelTextProperty();
-        //    game.incrementTurn();
-        //}
+        if(!game.hasEnded() && game.isHumanTurn()){
+            Flooder.flood(game.getPlayer().getStartCell(), color);
+            setScoreLabelTextProperty();
+            game.incrementTurn();
+        }
     }
 
     private void setPauseAnimation(){
@@ -115,10 +111,8 @@ public class GameController {
     }
 
     private void setScoreLabelTextProperty() {
-        // TODO
-        //  uncomment
-        //  Player player = game.getPlayer();
-        //  scoreLabel.textProperty().setValue(Integer.toString(game.getPlayerScore(player)));
+        Player player = game.getPlayer();
+        scoreLabel.textProperty().setValue(Integer.toString(game.getPlayerScore(player)));
     }
 
 
@@ -138,8 +132,7 @@ public class GameController {
 
     @FXML
     public void setPlayerHuman(){
-        // TODO
-        //  game.setPlayer(new HumanPlayer("human", getGridStartCell()));
+        game.setPlayer(new HumanPlayer("human", getGridStartCell()));
     }
 
     @FXML
