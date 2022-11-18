@@ -13,17 +13,17 @@ public class GreedyStrategy implements PlayStrategy{
 
     @Override
     public Color play(Cell startCell) {
-        ColoredCellIterator cl = new ColoredCellIterator(startCell);
+        ColoredCellIterator coloredCellIterator = new ColoredCellIterator(startCell);
         int max = 0;
         int newMax = 0;
         int maxIndex = 0;
         for (int i = 0; i < availableColors.size(); i++) {
             if (newMax > max) {
                 max = newMax;
-                max = i;
+                maxIndex = i;
             }
-            for (int j = 0; j < cl.pendingCells.size(); j++) {
-                if (availableColors.get(i).equals(cl.pendingCells.stream().toList().get(i).getColor())) {
+            for (int j = 0; j < coloredCellIterator.pendingCells.size(); j++) {
+                if (availableColors.get(i).equals(coloredCellIterator.pendingCells.stream().toList().get(j).getColor())) {
                     newMax++;
                 }
             }
