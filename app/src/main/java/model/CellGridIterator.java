@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class CellGridIterator implements Iterator<Cell> {
-    private ArrayGrid grid;
+    private final ArrayGrid grid;
     private int indexRowPro;
     private int indexColumnPro;
 
