@@ -7,19 +7,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ComputerPlayerTest {
 
-    // TODO
-    //  uncomment and adapt
-/*
+
     @Test
     void testSetStrategyAndPlay() {
-        ComputerPlayer player = new ComputerPlayer(new SquareCell(),null);
-        player.setStrategy(startCell -> Color.INDIGO);
+        ComputerPlayer player = new ComputerPlayer(null, new SquareCell());
+        player.setPlayStrategy(startCell -> Color.INDIGO);
         assertThat(player.play()).isEqualTo(Color.INDIGO);
     }
 
 
     @Test
     void testIsHuman() {
-        assertThat(new ComputerPlayer(new SquareCell(), null).isHuman()).isFalse();
-    }*/
+        assertThat(new ComputerPlayer(null, new SquareCell()).isHuman()).isFalse();
+    }
 }

@@ -34,6 +34,8 @@
                                                toggleGroup="$togglePlayerOne"></RadioMenuItem>
                                 <RadioMenuItem text="random" onAction="#setPlayerRandom"
                                                toggleGroup="$togglePlayerOne"></RadioMenuItem>
+                                <RadioMenuItem text="cyclic" onAction="#setPlayerCyclic"
+                                                toggleGroup="$togglePlayerOne"></RadioMenuItem>
                                 <RadioMenuItem text="random walk" onAction="#setPlayerRandomWalk"
                                                toggleGroup="$togglePlayerOne"></RadioMenuItem>
                                 <RadioMenuItem text="greedy" onAction="#setPlayerGreedy"

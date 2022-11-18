@@ -8,14 +8,11 @@ import java.util.Set;
 import java.util.Iterator;
 
 public class ColoredCellIterator implements Iterator<Cell> {
-    private final Cell startCell;
     private final Color color;
-    private Set<Cell> visitedCells;
-    private Set<Cell> pendingCells;
-    private Cell cell;
+    public Set<Cell> visitedCells;
+    public Set<Cell> pendingCells;
 
     public ColoredCellIterator(Cell startCell) {
-        this.startCell = startCell;
         this.color = startCell.getColor();
         this.pendingCells = new HashSet<>();
         this.visitedCells = new HashSet<>();

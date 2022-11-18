@@ -86,12 +86,12 @@ public class GameController {
     }
 
     private void playComputerTurn(){
-        /*if (!game.hasEnded() && !game.isHumanTurn()){
+        if (!game.hasEnded() && !game.isHumanTurn()){
             ComputerPlayer player = ((ComputerPlayer) game.getPlayer());
             Flooder.flood(player.getStartCell(), player.play());
             setScoreLabelTextProperty();
             pause.play();
-        }*/
+        }
     }
 
     public void playHumanTurn(Color color){
@@ -137,29 +137,29 @@ public class GameController {
 
     @FXML
     public void setPlayerRandom() {
-        // TODO
-        //  Player player = ... instantiate  a ComputerPlayer named "random" that follows the random strategy
-        //  game.setPlayer(player);
+        Player player = new ComputerPlayer("random", matrixPane.getGrid().getCell(0, 0), new RandomStrategy(availableColors, random));
+        game.setPlayer(player);
+    }
+    public void setPlayerCyclic() {
+        Player player = new ComputerPlayer("cyclic", matrixPane.getGrid().getCell(0, 0), new CyclicStrategy(availableColors));
+        game.setPlayer(player);
     }
     @FXML
     public void setPlayerRobin() {
-        // TODO
-        //  Player player = ... instantiate a ComputerPlayer named "cyclic" that follows the cyclic strategy
-        //  game.setPlayer(player);
+        Player player = new ComputerPlayer("cyclic", matrixPane.getGrid().getCell(0, 0), new RobinStrategy(availableColors));
+        game.setPlayer(player);
     }
 
     @FXML
     public void setPlayerRandomWalk() {
-        // TODO
-        //  Player player = ... instantiate a ComputerPlayer named "walker" that follows the random walk strategy
-        //  game.setPlayer(player);
+        Player player = new ComputerPlayer("walker", matrixPane.getGrid().getCell(0, 0), new RandomWalk());
+        game.setPlayer(player);
     }
 
     @FXML
     public void setPlayerGreedy() {
-        // TODO
-        //  Player player = ... instantiate a ComputerPlayer named "greedy" that follows the greedy strategy
-        //  game.setPlayer(player);
+        Player player = new ComputerPlayer("greedy", matrixPane.getGrid().getCell(0, 0), new GreedyStrategy(availableColors));
+        game.setPlayer(player);
     }
 
 }

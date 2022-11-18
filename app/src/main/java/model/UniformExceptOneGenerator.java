@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 public class UniformExceptOneGenerator  implements ColorGenerator {
     private final Color uniformColor;
     private final Color exceptionColor;
-    private int i = 0;
+    private int index = 0;
 
     public UniformExceptOneGenerator(Color uniformColor, Color exceptionColor) {
         this.uniformColor = uniformColor;
@@ -14,8 +14,8 @@ public class UniformExceptOneGenerator  implements ColorGenerator {
 
     @Override
     public Color nextColor(Cell cell) {
-        i++;
-        if ((i-1) != 1) {return uniformColor;}
+        index++;
+        if ((index-1) != 1) {return uniformColor;}
         return exceptionColor;
     }
 }
